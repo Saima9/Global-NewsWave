@@ -15,15 +15,16 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: lightblue;
+  background-color: indianred;
   padding: 9px;
 }
 nav input{
-  width: 250px;
+  width: 255px;
   text-decoration: none;
   padding: 9px;
-  font-size: 18px;
+  font-size: 17px;
   border: none;
+  border-radius: 4px;
 }
 .searchBar{
   display: flex;
@@ -33,9 +34,9 @@ nav input{
 nav button{
   width: 70px;
   height: 38px;
-  background-color: blue;
+  background-color: rgba(137, 43, 226, 0.89);
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -71,24 +72,27 @@ nav ul{
 .card .title{
   font-weight: 600;
   font-size: 18px;
-  margin-top: -7px;
+    margin-top: -7px;
+  text-decoration: none;
+  color: black;
 }
 .card .title:hover{
   border-bottom: 1px solid black;
+  
   cursor: pointer;
 }
 .card .content{
   padding: 9px;
 }
 .card button{
-  background-color: rgb(29, 162, 214);
+  background-color: rgba(137, 43, 226, 0.782);
   border: none;
   cursor: pointer;
   width: 80px;
   height: 28px;
   color: white;
   font-size: 13px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .categoryBtn{
   display: flex;
@@ -97,12 +101,12 @@ nav ul{
 }
 .categoryBtn button{
   gap: 11px;
-  width: 130px;
+  width: 140px;
   height: 33px;
-  background-color: rgb(255, 108, 108);
+  background-color: rgba(184, 135, 11, 0.877);
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 17px;
   border-radius: 16px;
   color: white;
   cursor: pointer;
