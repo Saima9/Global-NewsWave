@@ -1,30 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Card from "./Card";
 const Newsapp = () => {
   const API_KEY = "709942faa7c34215a5e4f5c1ebf3c13d";
-  const [search, setSearch] = useState("india");
+  const searchElement = useRef('');
   const [newsData, setNewsData] = useState(null);
+  useEffect(() => {
+    getData("india");
+  }, []);
+ 
 
-  const getData = async () => {
+  const getData = async (search) => {
+    
     const response = await fetch(
       `https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`
     );
+    console.log(search)
     const jsonData = await response.json();
     console.log(jsonData.articles);
 
     setNewsData(jsonData.articles);
-    setSearch("")
+    searchElement.current.value=("");
   };
+ const fetchCall=()=>{
+  let search=searchElement.current.value;
+
+  getData(search)
+
+  }
 
   useEffect(() => {
-    getData();
+    getData("india");
   }, []);
 
-  const handelInput = (e) => {
-    setSearch(e.target.value);
-  };
+ // const handelInput = (e) => {
+  //  console.log(e) };
+
   const inputData = (event) => {
-    setSearch(event.target.value);
+    const newSearch=event.target.value
+  
+    getData(newSearch)
   };
 
   return (
@@ -41,10 +55,10 @@ const Newsapp = () => {
           <input
             type="text"
             placeholder="Search News"
-            value={search}
-            onChange={handelInput}
+            
+            ref={searchElement}
           />
-          <button onClick={getData}> Search</button>
+          <button onClick={fetchCall}> Search</button>
         </div>
       </nav>
       <div>
