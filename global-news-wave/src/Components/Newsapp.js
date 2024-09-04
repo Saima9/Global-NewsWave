@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Card from "./Card";
 const Newsapp = () => {
-  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  const apiKey = process.env.REACT_APP_API_KEY;
   const searchElement = useRef('');
   const [newsData, setNewsData] = useState(null);
   useEffect(() => {
@@ -12,7 +12,7 @@ const Newsapp = () => {
   const getData = async (search) => {
     
     const response = await fetch(
-      `https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`
+      `https://newsapi.org/v2/everything?q=${search}&apiKey=${apiKey}`
     );
     console.log(search)
     const jsonData = await response.json();
