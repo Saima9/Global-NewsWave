@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Card from "./Card";
 const Newsapp = () => {
-  const API_KEY = "709942faa7c34215a5e4f5c1ebf3c13d";
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
   const searchElement = useRef('');
   const [newsData, setNewsData] = useState(null);
   useEffect(() => {
