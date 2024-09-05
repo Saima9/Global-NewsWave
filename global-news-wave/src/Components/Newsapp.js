@@ -11,7 +11,9 @@ const Newsapp = () => {
 
   const getData = async (search) => {
     
-    const response = await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${apiKey}`);
+    const response = await fetch(`http://localhost:5000/get_news?category=${search}`, {
+      method: 'GET',
+    });
     console.log(search)
     const jsonData = await response.json();
     console.log(jsonData.articles);
