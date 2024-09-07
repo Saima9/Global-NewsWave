@@ -49,7 +49,7 @@ const Newsapp = () => {
         </div>
         <ul style={{ display: "flex", gap: "11px" }}>
           <a style={{ fontWeight: 600, fontSize: "17px" }}>All News</a>
-          <a style={{ fontWeight: 600, fontSize: "17px" }}>Trending</a>
+          <a className="text-b" style={{ fontWeight: 600, fontSize: "17px" }}>Trending</a>
         </ul>
         <div className="searchBar">
           <input
