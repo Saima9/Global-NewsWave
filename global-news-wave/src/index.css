@@ -134,6 +134,9 @@ nav ul{
     width: 100%;
     margin-bottom: 10px;
   }
+   nav button{
+    margin-bottom: 10px;
+  }
 
   .cardContainer {
     flex-direction: column;
