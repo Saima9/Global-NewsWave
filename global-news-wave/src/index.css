@@ -111,6 +111,8 @@ nav ul{
   color: white;
   cursor: pointer;
   padding: 2px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 
@@ -118,4 +120,43 @@ nav ul{
   text-align: center;
   font-weight: 600;
   font-size: 26px;
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  nav input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .categoryBtn {
+    flex-direction: row;
+  }
+
+  .categoryBtn button {
+  
+    width: 100%;
+  }
+
+  .head {
+    font-size: 22px;
+  }
+}
+.text-b{
+  padding-right: 25px;
+
+
 }
